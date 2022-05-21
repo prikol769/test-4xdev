@@ -1,0 +1,39 @@
+.Header {
+  padding: 0 64px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+
+  a + a {
+    margin-left: 50px;
+  }
+
+  a {
+    color: #000;
+    font-weight: 400;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      border-radius: 16px;
+      bottom: 0;
+      left: 0;
+      content: "";
+      height: 2px;
+      width: 0;
+      background-color: #000;
+    }
+
+    &:hover {
+      &:before {
+        width: 100%;
+        transition: all 0.45s ease;
+        background-color: #000;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,82 @@
+@import '../../index.scss';
+
+.ContactItem {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  margin-top: 16px;
+  transition: all 0.5s ease-out;
+  width: 100%;
+  min-height: 92px;
+
+  &:hover {
+    box-shadow: 0 5px 24px 7px rgb(34 60 80 / 29%);
+  }
+}
+
+
+.NameContainer {
+  display: flex;
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .FirstName {
+    max-width: 200px;
+    font-weight: 600;
+    @media (max-width: $mobile) {
+      max-width: 100px;
+    }
+    @media (max-width: $mobileSm) {
+      max-width: 90px;
+    }
+  }
+
+  .SecondName {
+    max-width: 200px;
+    margin: 0 8px;
+    @media (max-width: $mobile) {
+      max-width: 100px;
+    }
+    @media (max-width: $mobileSm) {
+      max-width: 45px;
+    }
+  }
+
+}
+
+.PhoneNumber {
+  margin-top: 8px;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Btn {
+  background: #FFFFFF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    background: #e0e0e0;
+  }
+}
+
+.ActionsContainer {
+  white-space: nowrap;
+  button + button {
+    margin-left: 5px;
+  }
+}
